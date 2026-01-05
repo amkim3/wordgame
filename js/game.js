@@ -88,11 +88,11 @@ document.getElementById("guess-form").addEventListener("submit", async e => {
   const guess = input.value.trim().toLowerCase();
   if (!guess) return;
 
-  const isWordValid = await validateGuess(guess);
-  if (!isWordValid) {
-    alert("Invalid word");
-    return;
-  }
+//   const isWordValid = await validateGuess(guess);
+//   if (!isWordValid) {
+//     alert("Invalid word");
+//     return;
+//   }
   const isComboWin = await validateCombination(guess, goalWord);
   if (isComboWin) {
     alert(guess + goalWord);
