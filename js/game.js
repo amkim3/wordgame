@@ -102,7 +102,7 @@ document.getElementById("guess-form").addEventListener("submit", async e => {
   else {
     const isComboValid = await validateCombination(baseWord, guess);
     if (!isComboValid) {
-        alert("Invalid combo word");
+        alert(baseWord + " + " + guess + " is not a valid compound word. or maybe it is.");
         return;
     }
     else totalGuesses++;
