@@ -30,22 +30,22 @@ async function renderChain() {
     document.getElementById("goal-word").textContent = goalWord;
 }
 
-async function validateGuess(guess) {
-    try {
-        const response = await fetch('http://localhost:3000/validate', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ word: guess.toLowerCase() })
-        });
-        const result = await response.json();
-        return result.valid;
-    } catch (error) {
-        console.error('Error validating guess:', error);
-        return false;
-    }
-}
+// async function validateGuess(guess) {
+//     try {
+//         const response = await fetch('http://localhost:3000/validate', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({ word: guess.toLowerCase() })
+//         });
+//         const result = await response.json();
+//         return result.valid;
+//     } catch (error) {
+//         console.error('Error validating guess:', error);
+//         return false;
+//     }
+// }
 
 async function validateCombination(base, guess) {
   const combined = (base + guess).toLowerCase();
