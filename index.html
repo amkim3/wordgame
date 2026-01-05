@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compound Word Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Compound Word Game</h1>
+  <p>Base word: <span id="base-word">...</span></p>
+
+  <p>Word chain:</p>
+  <ul id="chain"></ul>
+
+  <p>Goal word: <span id="goal-word">...</span></p>
+
+  <form id="guess-form">
+    <input type="text" id="guess-input" placeholder="Enter your guess" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <button id="undo-btn">Undo Last Guess</button>
+  <button id="reset-btn">New Game</button>
+
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>

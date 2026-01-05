@@ -1,0 +1,111 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Body and background */
+body {
+  background-color: #121212; /* dark background */
+  color: #e0e0e0;           /* light text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Game heading */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Base and goal words */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#base-word, #goal-word {
+  font-weight: bold;
+  color: #90caf9; /* soft blue highlight */
+}
+
+/* Word chain list */
+#chain {
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#chain li {
+  background-color: #1e1e1e; /* darker tile */
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Input box */
+#guess-input {
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  outline: none;
+  width: 200px;
+}
+
+#guess-input::placeholder {
+  color: #888;
+}
+
+/* Buttons */
+button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #333;
+  color: #e0e0e0;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: #90caf9;
+  color: #121212;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form layout */
+#guess-form {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  #guess-input {
+    width: 140px;
+  }
+
+  #chain li {
+    min-width: 40px;
+    padding: 0.4rem 0.6rem;
+  }
+}
